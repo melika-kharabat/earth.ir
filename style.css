@@ -1,0 +1,393 @@
+html{
+    font-size: 62.5%;
+}
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-link:#f97316;
+    --radius:0.5rem;
+    --color-text:#f97316;
+    --white:#fff;
+    --bg-gray:#FAFAFA;
+    --transition:all 300ms;
+    --bi-color:#22c55e;
+    --txt-gray:#c084fc
+}
+@font-face {
+    font-family: "vazir";
+    src: url("./fonts/Vazir.ttf");
+    src: url("./fonts/Vazir.eot") format("eot"),
+         url("./fonts/Vazir.woff") format("woff"),
+         url("./fonts/Vazir.woff2") format("woff2");
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: "vazir";
+    line-height: 2.8rem;
+}
+.container{
+    max-width: 140rem;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+.btn{
+    background-color: var(--color-link);
+    border-radius: var(--radius);
+    padding: 0.7rem 1.5rem;
+    color: var(--white);
+    transition: var(--transition);
+}
+
+/* --------------Header --------------*/
+.header{
+    background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url("./image/nasa-Q1p7bh3SHj8-unsplash.jpg") center/cover;
+    height: 80vh;
+}
+.header__content{
+    text-align: center;
+    color: var(--white);
+    position: absolute;
+    top: 0;
+    bottom: 20%;
+    right: 0;
+    left: 0;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.header__content-title{
+    color: var(--color-text);
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+.header__content-text{
+        color: var(--color-text);
+        margin-bottom: 2rem;
+        font-size: 2.2rem;
+}
+.header__content-link{
+    border: solid 1px var(--color-link);
+    outline-style: solid;
+    outline-color: var(--color-link);
+    outline-width: medium;
+    outline-offset: 0.4rem;
+    padding: 0.7rem 2rem;
+    margin-top: 2rem;
+}
+
+/*---------------- Main --------------*/
+
+/* Features */
+.features{
+    display: flex;
+    background-color: var(--bg-gray);
+    justify-content: space-evenly;
+}
+.feature{
+    text-align: center;
+    padding: 3rem 0;
+    transition: var(--transition);
+    width: 100%;
+}
+.feature:hover{
+    background-color: var(--white);
+    border-bottom: 2px solid var(--color-link);
+}
+.bi{
+    font-size: 4.5rem;
+    color: var(--bi-color);
+    transition: var(--transition);  
+}
+.feature:hover .bi{
+    font-size: 5rem;
+}
+
+.feature__title{
+    margin: 1.7rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.feature__caption{
+    max-width: 27rem;
+    margin: 0 auto;
+    color: var(--txt-gray);
+}
+
+/* About */
+.about-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0;
+}
+.about__img{
+    width: 43rem;
+    display: block;
+    overflow: hidden;
+    border: 3px solid var(--color-link);
+    border-radius: var(--radius);
+    height: 29rem;
+}
+.about__img-bg{
+    max-width: 100%;
+    transition: var(--transition);
+    height: 29rem;
+}
+.about__img-bg:hover{
+    background-color: var(--color-text);
+    transform: scale(1.2);
+}
+.about__text{
+    width: 55%;
+}
+.about__text-title{
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.about__text-caption{
+    margin: 2rem 0 1rem 0;
+}
+
+/* Attractions */
+.attractions{
+    background-color: var(--white);
+    text-align: center;
+    padding: 3.5rem 0;
+    border-top: 2px solid var(--bg-gray);
+}
+.attractions__title{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-link);
+}
+.attractions__name{
+    font-size: 1.8rem;
+    margin: 1rem 0 3rem 0;
+}
+.attractions__places{
+    display: flex;
+    justify-content: space-around;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+.attractions__place-ico{
+    position: absolute;
+    bottom: 0;
+    z-index: 10;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 0.5rem 0.7rem 0.1rem 0.7rem;
+}
+.bi-heart-fill{
+    font-size: 3rem;
+    color: red;
+    transition: none;
+}
+.attractions__place{
+    height: 55rem;
+    width: 36rem;
+    border-radius: var(--radius);
+    margin-top: 2rem;
+    box-shadow: inset 0 -3em 3em rgba(209, 195, 115, 0.1),
+    0.3em 0.3em 1em rgba(218, 193, 125, 0.3); 
+    transition: all 400ms;
+}
+.attractions__place:hover{
+    transform: scale(1.1);
+}
+.attractions__place-img{
+    position: relative;
+    z-index: 0;
+    width: 36rem;
+    height: 30rem;
+    border-radius: var(--radius);
+}
+.attractions__place-caption-title{
+    margin: 2rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.attractions__place-caption-text{
+    margin: 1.5rem 0;
+}
+.attractions__place-caption-link{
+    margin: 0 0 2rem 0;
+}
+
+/* Contact */
+.contact{
+    background-color: var(--bg-gray);
+    margin: 4rem 0;
+    padding: 8rem 0;
+}
+.contact-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact__address-ico {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--color-link);
+}
+.contact__ico{
+    margin-left: 0.5rem;
+    font-size: 3rem;
+}
+.contact__address-mail{
+    margin: 2rem 0;
+}
+.contact__address-txt{
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+.contant__email{
+    background-color: var(--white);
+    width: 50rem;
+    height: 38rem;
+    text-align: center;
+    border-radius: var(--radius);
+    box-shadow: 0 -3em 3em rgba(209, 195, 115, 0.1),
+    0.3em 0.3em 1em rgba(218, 193, 125, 0.3);
+}
+.contant__email-title{
+    margin: 2rem 0;
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color-text);
+}
+.contant__email-mail,
+.contant__email-name,
+.contant__email-txt{
+    width: 90%;
+    display: block;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
+    background-color: var(--bg-gray);
+    border-radius: var(--radius);
+    border: none;
+}
+
+.contant__email-btn{
+    border: none;
+    width: 100%;
+    background-color: var(--color-link);
+    padding: 2rem;
+    margin-bottom: 0;
+    border-radius: var(--radius);
+    font-size: 1.5rem;
+    font-family: "vazir";
+    font-weight: bold;
+    color: var(--white);
+}
+::placeholder{
+    font-family: "vazir";
+    font-weight: bold;
+}
+
+/* Footer */
+.footer{
+    background-color: var(--color-link);
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer__icons .bi{
+    color:var(--bg-gray);
+    font-size: 2rem;
+    padding: 2rem;
+}
+.footer__icons .bi-twitter:hover{
+    color: blue;
+}
+.footer__icons .bi-instagram:hover{
+    color: pink;
+}
+.footer__icons .bi-whatsapp:hover{
+    color: green;
+}
+.footer__caption{
+    font-size: 1.2rem;
+}
+.footer__caption-name{
+    color: var(--bg-gray);
+}
+
+
+
+@media screen and (max-width:1200px) {
+    .container{
+        max-width: 116rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .features{
+        flex-wrap: wrap;
+    }
+    .feature{
+        width: 50%;
+    }
+    .about-wrapper{
+        padding: 0 2rem;
+    }
+}
+@media screen and (max-width:992px){
+    .container{
+        max-width: 92rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-wrapper{
+        flex-wrap: wrap;
+    }
+    .contant__address{
+        margin-bottom: 1.5rem;
+    }
+
+}
+@media screen and (max-width:768px){
+    .container{
+        max-width: 72rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .about-wrapper{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .about__text{
+        margin-bottom: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+    .contant__email{
+        width: 40rem;
+    }
+    .contact-wrapper{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:500px){
+    .container{
+        max-width: 54rem;
+    }
+    .feature{
+        width: 100%;
+    }
+    .contant__email{
+        width: 30rem;
+    }
+    .contact__address-mail,
+    .contact__address-txt,
+    .contact__address-name{
+        width: 80%;
+        padding: 1.5rem 1rem;
+    }
+}
